@@ -49,11 +49,10 @@ function del(){
 
 
     let elems = document.querySelectorAll('li');
-
     let i=1
     for (let elem of elems) {
         elem.addEventListener('click', function() {
-            console.log('Удалён '+i);
+            // console.log('Удалён '+i);
             elem.remove();
         }
         );
