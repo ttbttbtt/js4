@@ -41,15 +41,18 @@ function addBtn(){
 }
 
 function del(){
-    // document.querySelectorAll('ol li').forEach((link, index) => {
-    //     link.addEventListener('click', () => {
-    //         console.log('Удалён объект с индексом ' + index + new Date());
-    //     });
-    //  });
+    // удаление с массива. fix: empty
+    document.querySelectorAll('ol li').forEach((link, index) => {
+        link.addEventListener('click', () => {
+            delete(arr[index])
+            // console.log('Удалён объект с индексом ' + index + new Date());
+        });
+     });
 
 
+    // удаление с экрана
     let elems = document.querySelectorAll('li');
-    let i=1
+    let i=0
     for (let elem of elems) {
         elem.addEventListener('click', function() {
             // console.log('Удалён '+i);
